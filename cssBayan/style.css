@@ -87,6 +87,11 @@ body {
     .container:hover .item-plus {
         display: block;
     }
+
+    .item:hover {
+        color: blue;
+    }
+    
     
     .item:hover .item-x {
         display: block;
@@ -94,6 +99,26 @@ body {
     
     .item:hover .item-plus {
         display: none;
+    }
+}
+
+@media screen and (min-width: 820px) {
+    body {
+        font-size: 20px;
+    }
+    .main-title {
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    body {
+        font-size: 30px;
+    }
+    .main-title {
+        font-size: 50px;
+        margin-bottom: 20px;
     }
 }
 

@@ -19,13 +19,33 @@ body {
 }
 
 .item {
-    border: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
     margin-bottom: 10px;
+}
+
+.item-firstline {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-x {
+    width: 20px;
+    display: none;
+}
+
+.item-plus {
+    width: 20px;
+    display: none;
 }
 
 .item-clickable {
     display: block;
     cursor: pointer;
+}
+
+.item-text img {
+    width: 50%;
 }
 
 .item-text {
@@ -37,14 +57,27 @@ body {
     appearance: none;
 }
 
-.item-clickable :hover + .item-text {   
-    display: block;
-}
-
 .item-input:checked + .item-text {
-    display: block;
+    display: flex;
+    justify-content: center;
+}
+
+.item-input:checked + .item-text img {
+    width: 60%;
+    transition: all 0.1s linear;
 }
 
 
 
 
+@media screen and (min-width:320px) {
+    .item-clickable:hover .item-text {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+@media screen and (min-width:820px) {
+    
+}

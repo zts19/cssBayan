@@ -31,11 +31,13 @@ body {
 
 .item-x {
     width: 20px;
+    height: 18px;
     display: none;
 }
 
 .item-plus {
     width: 20px;
+    height: 18px;
     display: none;
 }
 
@@ -67,17 +69,32 @@ body {
     transition: all 0.1s linear;
 }
 
+@media screen and (max-width: 320px) {
+    .item-plus {
+        display: block;
+    }
+    .item-input:checked ~ .item-x {
+        display: block;
+    }
+}
 
-
-
-@media screen and (min-width:320px) {
+@media screen and (min-width:321px) {
     .item-clickable:hover .item-text {
         display: flex;
         justify-content: center;
     }
-}
 
-
-@media screen and (min-width:820px) {
+    .container:hover .item-plus {
+        display: block;
+    }
     
+    .item:hover .item-x {
+        display: block;
+    }
+    
+    .item:hover .item-plus {
+        display: none;
+    }
 }
+
+
